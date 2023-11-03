@@ -1,0 +1,136 @@
+:root {
+    --color00: #8888ceb3;
+    --color01: #f3f3f3;
+    --color02: #1b1b32;
+    --color03: #1b1b3270;
+    --color04: #37af65;
+    --color05: #3b3b9ecc;
+    --color06: #3b3b4f;
+    --color07: #121122a1;
+    --color08: #00ffff;
+
+    --font00: 'Dosis';
+}
+
+* {
+    font-family: var(--font00);
+    font-weight: 900;
+}
+
+@font-face {
+    font-family: 'Dosis';
+    src: url(fontes/static/Dosis-ExtraLight.ttf) format ('truetype');
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    margin: 0;
+    background-color: var(--color05);
+    color: var(--color01);
+    font-size: 16px;
+}
+
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    background: var(--color-darkblue);
+    background-image: linear-gradient(115deg, var(--color05), var(--color00)), url(https://cdn.freecodecamp.org/testable-projects-fcc/images/survey-form-background.jpeg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+h1 {
+    font-family: var(--font00);
+    font-size: 50px;
+    font-weight: bolder;
+}
+
+p {
+    font-size: 25px;
+    font-weight: lighter;
+}
+
+h1,
+p {
+    margin: 1em auto;
+    text-align: center;
+}
+
+form {
+    width: 60vw;
+    max-width: 800px;
+    min-width: 300px;
+    margin: 0 auto;
+    padding-bottom: 2em;
+}
+
+fieldset {
+    border-radius: 5px;
+    border: none;
+    padding: 2rem 0;
+    padding: 20px;
+    border-bottom: 3px solid var(--color06);
+    background-color: var(--color07)
+}
+
+fieldset:last-of-type {
+    border-bottom: none;
+}
+
+label {
+    display: block;
+    margin: 0.5rem 0;
+    line-height: 40px;
+    padding: 5px;
+}
+
+input,
+textarea,
+select {
+    font-size: 18px;
+    margin: 10px 0 0 0;
+    width: 100%;
+    min-height: 2em;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: var(--color01);
+}
+
+.inline {
+    width: unset;
+    margin: 0 0.5em 0 0;
+    vertical-align: middle;
+}
+
+input[type="radio"] {
+    background-color: var(--color08);
+}
+
+input[type="file"] {
+    padding: 1px 2px;
+}
+
+.inline {
+    display: inline;
+}
+
+button {
+    display: block;
+    width: 100%;
+    margin: 1em auto;
+    height: 2em;
+    font-size: 1.1rem;
+    color: var(--color01);
+    background-color: var(--color04);
+    border-style: none;
+    box-shadow: var(--color02);
+    border-radius: 3px;
+    min-width: 300px;
+}
